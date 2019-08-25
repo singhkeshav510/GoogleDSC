@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Home:WebClub</title>
+        <link rel="stylesheet" type="text/css" href="Log.css" hreflang="en">
+        
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+    </head>
+    <body>
+        
+        <div class="d112">
+             
+             <ul>
+               <li style="float:left;"><a title="Original Site" href="https://webclub-nitk.github.io/"><img  src="https://webclub-nitk.github.io/images/webclub-logo-orange.png" style="width:60px;height:30px;padding-bottom:0px;margin:0;" ></a></li>
+                <li style="background-color: rgb(48, 42, 42);padding-top: 2px; padding-bottom: 2px;"><a href="Login/LoginPage.htm"  style="text-decoration: none; color:rgb(240, 205, 205); " ><b>Login</b></a></li>
+                <li style="background-color: white; "><a  style="text-decoration: underline; color:red;" href="#news"><i>Register</i></a></li>
+                <li><a title="About" href="#about">About Us</a></li>
+                <li><a title="Contact Info" href="#contact">Contact Us</a></li>
+                <li><a title="Home" href="#home">Home</a></li>
+              </ul>
+            
+          </div>
+          <div class="d111">
+                <span id="d12">
+                    <p>We are</p>
+                    <h4>Web Enthusiasts' Club</h4>
+                    <p>NITK</p>
+
+                    <h2>Organisation for Developers</h2>
+                </span>
+            </div>
+            <a href="#" style="font-size:30px;cursor:pointer;color:rgb(207, 218, 218);border:1px;border-radius:50%;padding: 2px;text-decoration: none;" onmouseover="openNav()" onmouseout="closeNav()" >&#9776;</a>
+            <div class="d13" id="d3" onmouseover="openNav()" onmouseout="closeNav()">
+                  <a href="#">HomePage</a>
+                <a href="Projects/Projects.htm">Projects</a>
+                <a href="Team/Team.htm">Team</a>
+                <a href="Events/Events.htm">Events</a>
+                <a href="Contests/Contests.htm">Contests</a>
+                
+            </div>
+            <div class="con">
+                   <h1>Hello,World</h1>
+                   <div id="bx">
+                       
+                       <span><img src="images/h3.png" onmouseover="img(this)" alt="hello world" /> We are group of motivated, passionate students who provide help, technical support, education(in form of talks, lectures, workshops, demonstrations, code showcases, etc.) 
+                        to each other as well as to anyone else who is interested; other students, faculty and any denizen of National Institute of Technology Karanataka, Surathkal.</span>
+
+                   </div> 
+                   </div>
+                    
+                      <div id="co12" >
+                          <p onmouseover="upc()" onmouseout="opc()">Upcoming
+                            <br>
+                            Events
+                            </p>
+                          </div>
+                      <div class="co2" id="c2">
+                        <span>
+                            <ul><li><h1>Papers We Love - Map Reduce</h1>
+                            <p>Venue: ISTE Seminar Hall</p>
+                              <p>Time: undefined</p></li>
+                              <li><h1>Hidden Markov Models for Reinforcement Learning</h1>
+                               <p> Venue: Computer Science </p><p>Department Seminar Hall</p>
+                               <p> Time: undefined</p></li>
+                              <li><h1>Introduction to Docker</h1>
+                              <p>Venue: Computer Science<p>Department Seminar Hall</p> 
+                               </p>
+                              <p> Time: undefined</p></li>
+                              </ul>
+
+                          
+                        </span>
+                      </div>
+                      <div id="about">
+
+                        <p>About</p>
+                        <div class="bo1">
+                            <p>A Non-Exclusive Club established at NITK(Sample Text)</p>
+                          
+
+                        </div>
+                      </div>
+
+
+
+
+
+                  
+                  <script>
+                    function upc(){
+                      document.getElementById("co12").style.marginLeft="400px";
+                      document.getElementById("co12").style.marginRight="400px";
+                      doucument.getElementById("c2").style.display="block";
+                    }
+                    function opc(){
+                      document.getElementById("co12").style.marginLeft="4px";
+                      document.getElementById("co12").style.marginRight="4px";
+                      
+                    }
+                    function openNav() {
+                      document.getElementById("d3").style.width = "20%";
+                    }
+                    
+                    function closeNav() {
+                      document.getElementById("d3").style.width = "0%";
+                    }
+                    function img(val){
+                      document.getElementById("bx").style.backgroundColor="rgb(187, 233, 19)";
+                      if(val.style.float="right")
+                      val.style.float="left";
+                       }
+                    </script>
+        </body>
+</html>
+            
+    

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Login:Webclub</title>
+        <link rel="stylesheet" type="text/css" href="Lg.css" hreflang="en">
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="google-signin-client_id" content="87331278814-559vrhjpi3vtp5uqg9h9s7fjagi6rhli.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+        <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0&appId=897113287336534&autoLogAppEvents=1"></script>
+
+    </head>
+    <body>
+     <div class="d112">
+             
+            <ul>
+              <li style="float:left;"><a title="Original Site" href="https://webclub-nitk.github.io/"><img  src="https://webclub-nitk.github.io/images/webclub-logo-orange.png" style="width:60px;height:30px;padding-bottom:0px;margin:0;" ></a></li>
+              
+               <li><a href="../index.htm#about">About Us</a></li>
+               <li><a href="#contact">Contact Us</a></li>
+               <li><a href="../index.htm">Home</a></li>
+             </ul>
+           
+         </div>
+         <div class="h1">
+                <p id="t1">WEB ENTHUSIASTS' NITK</p>
+                <div class="vl"></div>
+         </div>
+         <div id="pop" class="pop">
+               <div id="pro" > <form id="f1" >
+                    <div class="row">
+                            <h2 style="text-align:center">LOGIN</h2>
+                            <div class="vl1">
+                                    <span class="vl-innertext">or</span>
+                                  </div>   
+                                  <div class="col">
+                                       
+                                    <span class="fb-login-button" data-width="200px" data-size="large" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="true"></span>
+                                        <a href="#" class="twitter btn">
+                                          <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                                        </a>
+                                        <span id="my-signin2"></span>
+                                      </div>
+                                
+                                      <div class="col">
+                                        <div class="hide-md-lg">
+                                          <p>Or sign in manually:</p>
+                                        </div>
+                                
+                                        <input type="text" name="username" placeholder="Username" required>
+                                        <input type="password" name="password" placeholder="Password" required>
+                                        <input type="submit" value="Login">
+                                      </div>
+                                      
+                                    </div>
+                                  </form>
+                                <div id="f2" class="bottom-container">
+                                  <div class="row">
+                                    <div class="col">
+                                      <a href="#" style="color:rgb(14, 13, 13)" class="btn">Sign up</a>
+                                    </div>
+                                    <div class="col">
+                                      <a href="#" style="color:rgb(20, 19, 19)" class="btn">Forgot password?</a>
+                                    </div>
+                                  </div>  </div> </div>  
+                                </div>
+              
+                            </div>
+                            <script>
+                             function onSuccess(googleUser) {
+                                  var prof=googleUser.getBasicProfile();
+                              document.getElementById("f1").style.display="none";
+                              document.getElementById("f2").style.display="none";
+                              document.getElementById("pro").innerHTML="<h2 style='text-align:center'>User Profile</h2><div class='card'> <img style='border-radius:50%' src='" +prof.getImageUrl()+"'> <h1>"+prof.getName()+"</h1><p class='title'>"+prof.getEmail()+"</p><p>ID:"+prof.getId()+"</p><a href='#'' onclick='signOut();'>Sign out</a>";
+                                }
+                                function onFailure(error) {
+                                  console.log(error);
+                                }
+                                function renderButton() {
+                                  gapi.signin2.render('my-signin2', {
+                                    'scope': 'profile email',
+                                    'width': 240,
+                                    'height': 50,
+                                    'longtitle': true,
+                                    'theme': 'dark',
+                                    'onsuccess': onSuccess,
+                                    'onfailure': onFailure
+                                  });
+                                }
+                                function signOut() {
+                                var auth2 = gapi.auth2.getAuthInstance();
+                                auth2.signOut().then(function () {
+                                  console.log('User signed out.');
+                            // document.getElementById("pop").style.display="none";
+                            location.reload(true);       });
+
+                              }
+                            </script>
+                            <script>FB.getLoginStatus(function(response) {
+                                    if (response.status === 'connected') {
+                                        console.log(response.authResponse.accessToken);}});
+                                    FB.api('/me', function(response) {
+                                    console.log(JSON.stringify(response));
+                                });
+                              
+                             
+                             
+
+
+
+    </body>
+    </html>
