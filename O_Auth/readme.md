@@ -2,3 +2,4 @@
 //AS I DID WITH simply python -m SimpleHTTPServer command
 Facing Problem with Google sign on GithubHost
 //IMAGE TAKEN FROM GOOGLE
+//facebook o_auth works but no profile display
