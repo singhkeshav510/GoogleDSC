@@ -15,7 +15,7 @@
 
     </head>
     <body>
-     <div class="d112">
+     <div class="d112"><!-- top navigation bar -->
              
             <ul>
               <li style="float:left;"><a title="Original Site" href="https://webclub-nitk.github.io/"><img  src="https://webclub-nitk.github.io/images/webclub-logo-orange.png" style="width:60px;height:30px;padding-bottom:0px;margin:0;" ></a></li>
@@ -26,11 +26,11 @@
              </ul>
            
          </div>
-         <div class="h1">
+         <div class="h1">           <!-- writing mode vertical-->
                 <p id="t1">WEB ENTHUSIASTS' NITK</p>
                 <div class="vl"></div>
          </div>
-         <div id="pop" class="pop">
+         <div id="pop" class="pop">     <!--display as flex for center login view-->
                <div id="pro" > <form id="f1" >
                     <div class="row">
                             <h2 style="text-align:center">LOGIN</h2>
@@ -38,12 +38,11 @@
                                     <span class="vl-innertext">or</span>
                                   </div>   
                                   <div class="col">
-                                       
-                                    <span class="fb-login-button" data-width="200px" data-size="large" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="true"></span>
+ <!--working login fb-->                       <span class="fb-login-button" data-width="200px" data-size="large" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="true"></span>
                                         <a href="#" class="twitter btn">
                                           <i class="fa fa-twitter fa-fw"></i> Login with Twitter
-                                        </a>
-                                        <span id="my-signin2"></span>
+ <!--twitter just a button-->                                    </a>
+ <!--google_login -->                               <span id="my-signin2"></span>
                                       </div>
                                 
                                       <div class="col">
@@ -69,8 +68,8 @@
                                   </div>  </div> </div>  
                                 </div>
               
-                            </div>
-                            <script>
+                            </div>  <!--javascript file containing fb login,google-login and some effect of display-->
+                       <script>
                              function onSuccess(googleUser) {
                                   var prof=googleUser.getBasicProfile();
                               document.getElementById("f1").style.display="none";
@@ -91,7 +90,7 @@
                                     'onfailure': onFailure
                                   });
                                 }
-                                function signOut() {
+                                 function signOut() {    
                                 var auth2 = gapi.auth2.getAuthInstance();
                                 auth2.signOut().then(function () {
                                   console.log('User signed out.');
@@ -100,14 +99,10 @@
 
                               }
                             </script>
-                            <script>FB.getLoginStatus(function(response) {
-                                    if (response.status === 'connected') {
-                                        console.log(response.authResponse.accessToken);}});
-                                    FB.api('/me', function(response) {
-                                    console.log(JSON.stringify(response));
+                           
                                 });
                               
-                             
+                     <!--google sign out-->        
                              
 
 
